@@ -38,6 +38,11 @@ public class MainApp {
       userService.add(user3);
       userService.add(user4);
 
+      // Вызов нового метода
+      List<User> usersWithCar = userService.getUserByCarModelAndSeries("BMW", 5);
+      for (User user : usersWithCar) {
+         System.out.println(user);
+      }
 
       List<User> users = userService.listUsers();
       for (User user : users) {
