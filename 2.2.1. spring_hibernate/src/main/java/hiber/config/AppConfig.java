@@ -20,11 +20,12 @@ public class AppConfig {
    public DataSource dataSource() {
       DriverManagerDataSource dataSource = new DriverManagerDataSource();
       dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-      dataSource.setUrl("jdbc:mysql://localhost:3306/your_database");
-      dataSource.setUsername("your_username");
-      dataSource.setPassword("your_password");
+      dataSource.setUrl("jdbc:mysql://localhost:3306/yourdatabase?useSSL=false&serverTimezone=UTC");
+      dataSource.setUsername("yourusername");
+      dataSource.setPassword("yourpassword");
       return dataSource;
    }
+
 
    @Bean
    public LocalSessionFactoryBean sessionFactory() {
